@@ -10,6 +10,7 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
+    protected $table = 'karyawan';
     use HasFactory, Notifiable;
 
     /**
@@ -19,7 +20,8 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'email',
+        // 'email',
+        'nip',
         'password',
     ];
 
@@ -28,6 +30,10 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
+
+    protected $primaryKey = 'nip';
+    public $incrementing = false;
+    
     protected $hidden = [
         'password',
         'remember_token',
