@@ -20,8 +20,10 @@
                         data-bs-toggle="modal"
                         data-bs-target="#addRowModal"
                       >
-                        <i class="fa fa-plus"></i>
-                        Add Row
+                        <a class="btn btn-primary btn-round ss-auto" href='{{ route('mahasiswaCreate')}}'>
+                          <i class="fa fa-plus"></i>
+                          Add Row
+                        </a>
                       </button>
                     </div>
                   </div>
